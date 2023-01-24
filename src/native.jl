@@ -18,6 +18,7 @@ function llvm_machine(target::NativeCompilerTarget)
     t = Target(triple=triple)
 
     tm = TargetMachine(t, triple, target.cpu, target.features)
+    println(tm t)
     asm_verbosity!(tm, true)
 
     return tm
